@@ -15,6 +15,7 @@
       <!-- NAVBAR -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
+          <i class="fas fa-key"></i>
           <span class="navbar-brand mb-0 h1">Password Generator</span>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -32,7 +33,9 @@
               </li>
             </ul>
             <div class="d-flex">
-              <button class="btn btn-outline-success" type="submit">Source Code</button>
+              <form action="https://github.com/LeFelps/simple-pass_wordlist">
+                <button class="btn btn-outline-success" type="submit">Source Code</button>
+              </form>
             </div>
           </div>
         </div>
@@ -60,7 +63,7 @@
           <transition name="fade">
             <div v-show="page == 'about'" class="mt-5">
               <p class="my-0" style="font-size: 1.5vw;">
-                Password Wordlist 
+                This is a simple wordlist generator for "birthday + name + special character" password combinations.
               </p>
             </div>
           </transition>
