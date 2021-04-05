@@ -1,0 +1,16 @@
+{
+  "name": "simple-plass_wordlist",
+  "version": "1.0.0",
+  "description": "wordlist builder for simple name-birthday combination passwords",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lefelps",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.0-beta3",
+    "vue": "^2.6.12"
+  }
+}

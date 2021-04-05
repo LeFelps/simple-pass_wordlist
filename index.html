@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+
+    <div id="app">
+
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Password Generator</span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mx-1 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link pointer" v-bind:class="{active: page == 'home'}" aria-current="page" v-on:click="page = 'home'">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pointer" v-bind:class="{active: page == 'about'}" v-on:click="page = 'about'">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pointer" v-bind:class="{active: page == 'generate'}" v-on:click="page = 'generate'">Generate</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <button class="btn btn-outline-success" type="submit">Source Code</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- NAVBAR END -->
+      
+  
+      <div>
+        <div class="w-100 px-2 container">
+          
+          <!-- HOME -->
+          <transition name="fade">
+            <div v-show="page == 'home'" class="mt-5">
+              <p class="my-0 display-1">
+                Password Wordlist 
+              </p>
+              <p class="my-0 display-1 ">
+                Generator.
+              </p>
+            </div>
+          </transition>
+          <!-- HOME END -->
+          
+          <!-- ABOUT -->
+          <transition name="fade">
+            <div v-show="page == 'about'" class="mt-5">
+              <p class="my-0" style="font-size: 1.5vw;">
+                Password Wordlist 
+              </p>
+            </div>
+          </transition>
+          <!-- ABOUT END -->
+          
+          <!-- GENERATE -->
+          
+          <transition name="fade">
+            <div v-show="page == 'generate'" class="mt-5">
+              
+            </div>
+          </transition>
+          <!-- GENERATE END -->
+
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>
