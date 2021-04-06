@@ -68,9 +68,6 @@ var app = new Vue({
 
           // duplicate removal from improvedDates array
           improvedDates = removeDuplicates(improvedDates);
-          console.log(improvedDates);
-          console.log(this.names[0].name)
-
 
           // loop structure for building passwords array
           for (var a = 0 ; a < improvedDates.length ; a++){
@@ -87,8 +84,6 @@ var app = new Vue({
               }
             }
           }
-
-          console.log(passwordsArray);
           
           passwords = passwordsArray.join("\n")
 
