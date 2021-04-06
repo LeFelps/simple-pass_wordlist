@@ -7,16 +7,17 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css ">
   </head>
-  <body>
+  <body class="bg-light">
 
     <div id="app">
 
       <!-- NAVBAR -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <i class="fas fa-key"></i>
-          <span class="navbar-brand mb-0 h1">Password Generator</span>
+          <span class="fas fa-key mx-2 p" style=" font-size: 1.5rem; color:#fff"> </span>
+          <span class="navbar-brand mb-0 px-2 h1">Password Generator</span>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -44,26 +45,42 @@
       
   
       <div>
-        <div class="w-100 px-2 container">
-          
+        <div class="w-100 px-2 pb-3 container">
           <!-- HOME -->
           <transition name="fade">
             <div v-show="page == 'home'" class="mt-5">
+              <div style="height: 5vw;"></div>
               <p class="my-0 display-1">
                 Password Wordlist 
               </p>
-              <p class="my-0 display-1 ">
+              <p class="my-0 display-1">
                 Generator.
               </p>
+              <div style="height: 13vw;"></div>
+              <div clas="row">
+                <p class="my-0 display-4">  
+                  <i class="fas fa-clipboard-list mt-5 display-4" style="color:#212529d0; margin-right: 1vw;"></i>
+                  Wordlists are text files used in bruteforce pen-test
+                </p>
+              </div>
             </div>
           </transition>
           <!-- HOME END -->
           
-          <!-- ABOUT -->
+          <!-- ABOUT -->  
           <transition name="fade">
             <div v-show="page == 'about'" class="mt-5">
-              <p class="my-0" style="font-size: 1.5vw;">
-                This is a simple wordlist generator for "birthday + name + special character" password combinations.
+              <div style="height: 5vw;"></div>
+              <p class="my-0 display-3">
+                Wordlist Builder
+              </p>
+              <div style="height: 2vw;"></div>
+              <p class="my-0" style="font-size: 1.3vw;">
+                <b>What is this password generator?</b> <br>
+                This is a simple wordlist generator for "birthday + name + special character" password combinations. Meaning that after you input someone's birthay and name (plus abbreviations), this tool will generate all possible combinations of "strong" passwords. <br>
+                <br>
+                <b>What is this for?</b> <br>
+                It can be used to bruteforce pen-test your applications and accounts.
               </p>
             </div>
           </transition>
@@ -73,7 +90,32 @@
           
           <transition name="fade">
             <div v-show="page == 'generate'" class="mt-5">
-              
+
+              <p class="my-0 display-5">
+                Start Building
+              </p>
+              <div style="height: 2vw;"></div>
+              <div class="w-100 bg-white rounded border p-4">
+                <div class="form-group" style="font-size: 1.5rem;">
+                  <label for="birthday" class="mb-1">Birthday date</label>
+                  <input type="date" class="form-control" id="birthday" v-model="birthday"></input>
+                </div>
+                <div class="mt-3 row form-group" style="font-size: 1.5rem;">
+                  <p class="mb-1 w-auto">
+                    Names, nicknames and abbreviations
+                  </p>
+                  <button class="btn btn-outline-success mb-2 mx-1 w-auto" v-on:click="addName(names)">Add</button>
+                </div>
+                <div class="input-group mb-3" 
+                v-for="(input, index) in names"
+                :key="`nameInput-${index}`">
+                  <input v-model="input.name" id="name" type="text" class="form-control" placeholder="Name">
+                  <button class="btn btn-danger rounded" v-on:click="removeName(index, names)">Remove</button>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                  </div>
+                </div>
+                <button class="btn btn-primary" v-on:click="generatePasswords()">Generate!</button>
+              </div>
             </div>
           </transition>
           <!-- GENERATE END -->
@@ -82,7 +124,7 @@
       </div>
       
     </div>
-
+    
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="./node_modules/vue/dist/vue.js"></script>
     <script src="./js/main.js"></script>
