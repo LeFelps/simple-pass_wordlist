@@ -1,8 +1,8 @@
 {
   "name": "simple-plass_wordlist",
   "version": "1.0.0",
-  "description": "wordlist builder for simple name-birthday combination passwords",
-  "main": "index.js",
+  "description": "wordlist builder for simple name-birthday-specialCharacter combination passwords",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^5.0.0-beta3",
+    "file-saver": "^2.0.5",
     "vue": "^2.6.12"
   }
 }
