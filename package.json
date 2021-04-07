@@ -2,7 +2,7 @@
   "name": "simple-plass_wordlist",
   "version": "1.0.0",
   "description": "wordlist builder for simple name-birthday-specialCharacter combination passwords",
-  "main": "main.js",
+  "main": "./js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

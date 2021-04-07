@@ -13,7 +13,7 @@
 
     <div id="app">
 
-      <!-- NAVBAR -->
+      <!-- NAVBAR START -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <span class="fas fa-key mx-2 p" style=" font-size: 1.5rem; color:#fff"> </span>
@@ -43,10 +43,11 @@
       </nav>
       <!-- NAVBAR END -->
       
-  
+      
+      <!-- PAGE START -->
       <div>
         <div class="w-100 px-2 pb-3 container">
-          <!-- HOME -->
+          <!-- HOME START -->
           <transition name="fade">
             <div v-show="page == 'home'" class="mt-5">
               <div style="height: 5vw;"></div>
@@ -67,7 +68,7 @@
           </transition>
           <!-- HOME END -->
           
-          <!-- ABOUT -->  
+          <!-- ABOUT START -->  
           <transition name="fade">
             <div v-show="page == 'about'" class="mt-5">
               <div style="height: 5vw;"></div>
@@ -89,8 +90,7 @@
           </transition>
           <!-- ABOUT END -->
           
-          <!-- GENERATE -->
-          
+          <!-- GENERATE START -->      
           <transition name="fade">
             <div v-show="page == 'generate'" class="mt-5">
 
@@ -127,6 +127,7 @@
       </div>
       
     </div>
+    <!-- PAGE END -->
     
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="./node_modules/vue/dist/vue.js"></script>
