@@ -51,10 +51,11 @@ var app = new Vue({
 
           // loop structure for building improvedDates array with every combination of year, month and day with 'yyyy' and 'YY' formats
           for (var i = 0 ; i < 2; i++){
+            console.log(i);
             for (var a = 0 ; a < dates.length ; a++){
               for (var b = 0 ; b < dates.length ; b++){
                 for (var c = 0 ; c < dates.length ; c++){
-                  if (a != b || a != c || b != c){
+                  if (a != b && a != c && b != c){
                     improvedDates.push(dates[a]+dates[b]+dates[c])
                   }
                 }
@@ -63,8 +64,8 @@ var app = new Vue({
 
             // structure to be run if year is still on 'yyyy' format
             if(dates[0].length == 4){
-              for (var i = 0 ; i < 2; i++){
-                if (i == 0){dates[0] = dates[0].substring(2)}
+              for (var x = 0 ; x < 2; x++){
+                if (x == 0){dates[0] = dates[0].substring(2)}
                 for (var a = 0; a < dates.length; a++) {
                   for (var b = 0; b < dates.length; b++) {
                     if ( a != b){
