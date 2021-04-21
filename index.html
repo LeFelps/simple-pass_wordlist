@@ -94,6 +94,15 @@
           <transition name="fade">
             <div v-show="page == 'generate'" class="mt-5">
 
+              <div class="toast ms-auto me-3 fixed-top" style="margin-top: 4rem;">
+                <div class="toast-header bg-danger text-white">
+                  Error
+                </div>
+                <div class="toast-body" style="font-size: 1rem;">
+                  A date is necessary to generate the wordlist
+                </div>
+              </div>
+
               <p class="my-0 display-5">
                 Start Building
               </p>
@@ -128,7 +137,8 @@
       
     </div>
     <!-- PAGE END -->
-    
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/vue/dist/vue.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="./node_modules/file-saver/dist/FileSaver.js"></script>

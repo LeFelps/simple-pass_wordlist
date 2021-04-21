@@ -33,8 +33,7 @@ var app = new Vue({
 
         // checking for empty required inputs
         if (this.birthday == '' || blankName){
-          console.log('Erro');
-          //TODO Create alert element onscreen
+          $('.toast').toast('show')
         }else{
 
           var dates = this.birthday.split("-")
