@@ -3,7 +3,7 @@
 This is a simple wordlist generator for "birthday + name + special character" password combinations.
 
 
-# Example
+## Example
 
 ![image](https://user-images.githubusercontent.com/34667580/113796986-c5527900-9726-11eb-9dbc-89304a22dcd8.png)
 
