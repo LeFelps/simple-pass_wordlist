@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+
+body{
+    font-family: 'Baloo Tammudu 2', cursive;
+    color: #2b2b2b;
+    background-color: #f4f4f4;
+}
+.mb-n1{
+    margin-bottom: -10%;
+}
+.mb-n2{
+    margin-bottom: -20%;
+}
+.pb-n1{
+    padding-bottom: -10%;
+}
 .fade-enter-active {
     transition: opacity 1s;
 }
@@ -9,4 +25,20 @@
 }
 .pointer{
     cursor: pointer;
+}
+
+.cls-1{fill:#1e1e1e;}
+.cls-2{fill:#565656;}
+.cls-3{fill:#3d3d3d;}
+.cls-4{fill:#00a4d6;}
+
+
+.hero{
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 1050px) {
+    .hero{
+        visibility: visible;
+    }
 }
